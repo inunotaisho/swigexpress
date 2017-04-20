@@ -11,7 +11,11 @@ app.use('/static', express.static('public'))
 
 app.get('/', (req, res) => res.render('index'));
 
+/*register route*/
 app.get('/register', (req, res) => res.render('register'));
+
+/*login route*/
+app.get('/login', (req, res) => res.render('login'));
 
 app.get('/:template', (req, res) => {
   // This will look for '/views/${template}/index.html'
