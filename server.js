@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 let swig = require('swig');
 swig = new swig.Swig();
-router = express.Router();
+
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
@@ -11,9 +11,7 @@ app.use('/static', express.static('public'))
 
 app.get('/', (req, res) => res.render('index'));
 
-router.get('/register', function(req, res){
-        res.render('/register');
-    });
+app.get('/register', (req, res) => res.render('/register'));
 
 app.get('/:template', (req, res) => {
   // This will look for '/views/${template}/index.html'
