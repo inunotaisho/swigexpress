@@ -17,6 +17,5 @@ app.get('/:template', (req, res) => {
   res.render(`${req.params.template}`);
 })
 
-app.use(require('./lib/routes'));
 
 app.listen(1337, () => console.log('Listening...'));
