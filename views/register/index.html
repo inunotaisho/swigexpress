@@ -8,12 +8,13 @@
 
 {% block body %}
     Register
-  <form action="POST" action="/users/register">
+  <form action="/register" method="POST">
       <div>
           <label>Create username</label>
           <input type="text" name="username" required>
           <label>Create password</label>
           <input type="text" name="password" required>
+          <button>submit</button>
       </div>
   </form>
 {% endblock %}
