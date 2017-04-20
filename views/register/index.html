@@ -1,0 +1,19 @@
+{% extends "../base.html" %}
+
+{% block head_content %}
+    <link rel="stylesheet" href="/static/sign.css" />
+{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    Register
+  <form action="POST" action="/users/register">
+      <div>
+          <label>Create username</label>
+          <input type="text" name="username" required>
+          <label>Create password</label>
+          <input type="text" name="password" required>
+      </div>
+  </form>
+{% endblock %}

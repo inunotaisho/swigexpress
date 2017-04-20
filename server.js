@@ -8,7 +8,11 @@ app.set('view engine', 'html');
 
 app.use('/static', express.static('public'))
 
-app.get('/', (req, res) => res.render('index'))
+app.get('/', (req, res) => res.render('index'));
+
+app.use(require('./lib/routes'));
+
+app.use('/register', require('./lib/routes/register'));
 
 app.get('/:template', (req, res) => {
   // This will look for '/views/${template}/index.html'

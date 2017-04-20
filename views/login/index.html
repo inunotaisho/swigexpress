@@ -1,0 +1,17 @@
+{% extends "../base.html" %}
+
+{% block head_content %}
+    <link rel="stylesheet" href="/static/sign.css" />
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+  Login!
+  <form action="POST" action="/users/login">
+    <label>Login with username</label>
+    <input type="text" name="username" required>
+    <label>Login with password</label>
+    <input type="text" name="password" required>
+  </form>
+{% endblock %}
